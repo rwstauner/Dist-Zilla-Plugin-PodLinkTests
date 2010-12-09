@@ -30,13 +30,14 @@ my @tests = qw(linkcheck no404s);
 sub merged_section_data {
 	my ($self) = @_;
 
-	return {} if $self->test eq 'none';
+	my $selftest = $self->test;
+	return {} if $selftest eq 'none';
 
-	my $data = $self->SUPER::merged_section_data;
-	return $data if $self->test eq 'both';
+	my $data = $self->SUPER::merged_section_data();
+	return $data if $selftest eq 'both';
 
 	foreach my $test ( @tests ){
-		$self->test eq $test
+		$selftest eq $test
 			or delete $data->{"xt/release/pod-$test.t"};
 	}
 
