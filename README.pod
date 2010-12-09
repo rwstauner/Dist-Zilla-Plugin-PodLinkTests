@@ -1,6 +1,6 @@
 =head1 Dist::Zilla::Plugin::PodLinkTests
 
-A L<Dist::Zilla> pluign that creates a release test
+A L<Dist::Zilla> plugin that creates a release test
 to check your POD files for LE<lt>E<gt> link errors.
 
 =head1 SEE ALSO
