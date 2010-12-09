@@ -38,6 +38,12 @@ use strict; use warnings;
 
 use Test::More;
 
+{
+	my $env_skip = 'SKIP_POD_LINK_TESTS';
+	plan skip_all => "\$ENV{$env_skip} is set, skipping"
+		if $ENV{$env_skip};
+}
+
 eval "use Test::Pod::LinkCheck";
 if ( $@ ) {
 	plan skip_all => 'Test::Pod::LinkCheck required for testing POD';
