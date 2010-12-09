@@ -7,9 +7,9 @@ to check your POD files for LE<lt>E<gt> link errors.
 
 =over
 
-=item
+=item *
 
-* L<Test::Pod::LinkCheck>
+L<Test::Pod::LinkCheck>
 
 =back
 
