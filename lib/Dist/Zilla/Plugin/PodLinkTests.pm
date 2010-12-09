@@ -49,6 +49,8 @@ no Moose;
 
 1;
 
+=for stopwords CPANPLUS
+
 =for Pod::Coverage merged_section_data
 
 =head1 DESCRIPTION
