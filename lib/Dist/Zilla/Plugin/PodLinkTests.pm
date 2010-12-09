@@ -109,7 +109,7 @@ if ( $@ ) {
 	Test::Pod::LinkCheck->new->all_pod_ok;
 }
 ___[ xt/release/pod-no404s.t ]___
-#!/usr/bin/perl
+#!perl
 use strict; use warnings;
 
 use Test::More;
