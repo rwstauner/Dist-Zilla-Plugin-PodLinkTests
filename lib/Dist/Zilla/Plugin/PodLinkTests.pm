@@ -92,42 +92,46 @@ Using the C<x> command at the C<cpanp> prompt did the trick for me.
 __DATA__
 ___[ xt/release/pod-linkcheck.t ]___
 #!perl
-use strict; use warnings;
 
+use strict;
+use warnings;
 use Test::More;
 
 foreach my $env_skip ( qw(
-	SKIP_POD_LINK_TESTS
-	SKIP_POD_LINKCHECK
+  SKIP_POD_LINK_TESTS
+  SKIP_POD_LINKCHECK
 ) ){
-	plan skip_all => "\$ENV{$env_skip} is set, skipping"
-		if $ENV{$env_skip};
+  plan skip_all => "\$ENV{$env_skip} is set, skipping"
+    if $ENV{$env_skip};
 }
 
 eval "use Test::Pod::LinkCheck";
 if ( $@ ) {
-	plan skip_all => 'Test::Pod::LinkCheck required for testing POD';
-} else {
-	Test::Pod::LinkCheck->new->all_pod_ok;
+  plan skip_all => 'Test::Pod::LinkCheck required for testing POD';
+}
+else {
+  Test::Pod::LinkCheck->new->all_pod_ok;
 }
 ___[ xt/release/pod-no404s.t ]___
 #!perl
-use strict; use warnings;
 
+use strict;
+use warnings;
 use Test::More;
 
 foreach my $env_skip ( qw(
-	SKIP_POD_LINK_TESTS
-	SKIP_POD_NO404S
-	AUTOMATED_TESTING
+  SKIP_POD_LINK_TESTS
+  SKIP_POD_NO404S
+  AUTOMATED_TESTING
 ) ){
-	plan skip_all => "\$ENV{$env_skip} is set, skipping"
-		if $ENV{$env_skip};
+  plan skip_all => "\$ENV{$env_skip} is set, skipping"
+    if $ENV{$env_skip};
 }
 
 eval "use Test::Pod::No404s";
 if ( $@ ) {
-	plan skip_all => 'Test::Pod::No404s required for testing POD';
-} else {
-	all_pod_files_ok();
+  plan skip_all => 'Test::Pod::No404s required for testing POD';
+}
+else {
+  all_pod_files_ok();
 }
