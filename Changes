@@ -1,0 +1,12 @@
+Revision history for Dist-Zilla-Plugin-PodLinkTests
+
+{{$NEXT}}
+
+1.004000 2011-01-31
+
+  - Replace tabs with spaces in inline test files
+    for anyone using Dist::Zilla::Plugin::NoTabsTests [RT: #65293]
+
+1.003005 2010-12-10
+
+  - Initial release to CPAN
