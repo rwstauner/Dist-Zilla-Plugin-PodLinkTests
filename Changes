@@ -2,6 +2,11 @@ Revision history for Dist-Zilla-Plugin-PodLinkTests
 
 {{$NEXT}}
 
+1.005 2011-02-10
+
+  - Require   Test::Pod::LinkCheck
+  - Recommend Test::Pod::No404s
+
 1.004000 2011-01-31
 
   - Replace tabs with spaces in inline test files
