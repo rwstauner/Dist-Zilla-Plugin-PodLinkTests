@@ -30,6 +30,14 @@ my @tests = qw(linkcheck no404s);
 sub merged_section_data {
 	my ($self) = @_;
 
+	my $pre = 'Dist::Zilla::Plugin::Test::Pod::';
+	$self->log($_) for (
+		'!',
+		__PACKAGE__ . " is deprecated.",
+		"Use ${pre}LinkCheck and ${pre}No404s instead.",
+		'!',
+	);
+
 	my $selftest = $self->test;
 	return {} if $selftest eq 'none';
 
